@@ -68,14 +68,12 @@ export const Navigation: React.FC<NavigationProps> = ({
           >
             {isDateRevealed ? 'Revealed Date' : 'Reveal Date'}
           </button>
-          {isDateRevealed && (
-            <button
-              onClick={() => scrollTo('events')}
-              className="hover:text-[#996515] transition-colors hover:underline underline-offset-8"
-            >
-              Events
-            </button>
-          )}
+          <button
+            onClick={() => scrollTo('events')}
+            className="hover:text-[#996515] transition-colors hover:underline underline-offset-8"
+          >
+            Events
+          </button>
           <button
             onClick={() => scrollTo('gallery')}
             className="hover:text-[#996515] transition-colors hover:underline underline-offset-8"

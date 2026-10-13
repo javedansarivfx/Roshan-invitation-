@@ -14,7 +14,7 @@ const DEFAULT_BLESSINGS = [
   },
   {
     guestName: 'Dr. Zeeshan & Farzana (Bijnor)',
-    blessing: 'Barakallahu lakuma wa baraka alaikuma wa jama’a bainakuma fee khair. Looking forward to attending the Baraat and Walima!',
+    blessing: 'Barakallahu lakuma wa baraka alaikuma wa jama’a bainakuma fee khair. Looking forward to attending the Baraat & Nikah celebrations!',
     time: '2 days ago',
   },
   {
@@ -34,7 +34,7 @@ export const RsvpSection: React.FC<RsvpSectionProps> = ({ onShowerPetals }) => {
     phone: '',
     attendance: 'attending' as 'attending' | 'declining',
     guestCount: 2,
-    attendingEvents: ['haldi', 'nikah', 'walima'],
+    attendingEvents: ['haldi', 'nikah'],
     blessingMessage: '',
   });
 
@@ -302,11 +302,10 @@ export const RsvpSection: React.FC<RsvpSectionProps> = ({ onShowerPetals }) => {
                     <label className="block font-cinzel text-xs font-bold uppercase tracking-wider text-[#3A291A] mb-2">
                       Ceremonies You Plan to Attend
                     </label>
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                       {[
                         { id: 'haldi', label: '04 Dec — Haldi Ceremony' },
                         { id: 'nikah', label: '05 Dec — Baraat & Nikah' },
-                        { id: 'walima', label: '06 Dec — Walima Reception' },
                       ].map((evt) => {
                         const checked = formData.attendingEvents.includes(evt.id);
                         return (

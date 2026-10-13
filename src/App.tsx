@@ -141,14 +141,12 @@ export default function App() {
           />
         </motion.div>
 
-        {/* Section 7: Countdown to Nikah (Target: 05 December) - Enabled upon Reveal */}
-        {isDateRevealed && (
-          <motion.div {...sectionMotionProps}>
-            <CountdownSection isRevealed={isDateRevealed} />
-          </motion.div>
-        )}
+        {/* Section 7: Countdown to Nikah (Target: 05 December) */}
+        <motion.div {...sectionMotionProps}>
+          <CountdownSection isRevealed={isDateRevealed} />
+        </motion.div>
 
-        {/* Section 8: Wedding Events (04 Dec Haldi, 05 Dec Baraat & Nikah, 06 Dec Walima) */}
+        {/* Section 8: Wedding Events (04 Dec Haldi, 05 Dec Baraat & Nikah) */}
         <motion.div {...sectionMotionProps}>
           <EventsSection
             isRevealed={isDateRevealed}

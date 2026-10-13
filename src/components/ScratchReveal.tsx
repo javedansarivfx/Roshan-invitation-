@@ -228,9 +228,9 @@ export const ScratchReveal: React.FC<ScratchRevealProps> = ({
                 BARAAT & NIKAH
               </h4>
 
-              <div className="text-[11px] font-cinzel font-semibold text-[#5C4A3A] mt-1 space-y-0.5 bg-[#FAF7F2] px-3 py-1 rounded-lg border border-[#EFE5D3]">
-                <p>✦ BARAAT: 12:00 PM NOON</p>
-                <p>✦ NIKAH: 4:00 PM EVENING</p>
+              <div className="text-[10px] sm:text-[11px] font-cinzel font-semibold text-[#5C4A3A] mt-1 space-y-0.5 bg-[#FAF7F2] px-3 py-1 rounded-lg border border-[#EFE5D3]">
+                <p>✦ 04 DEC: HALDI CEREMONY (6:00 PM)</p>
+                <p>✦ 05 DEC: BARAAT (12 PM) & NIKAH (4 PM)</p>
               </div>
 
               <p className="font-cinzel text-[10px] tracking-wider text-[#786552] mt-1.5 font-medium">

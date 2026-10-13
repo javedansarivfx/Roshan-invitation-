@@ -47,18 +47,11 @@ export const FinalMonogram: React.FC<FinalMonogramProps> = ({
             {WEDDING_DATA.groom.name}
           </h2>
 
-          {/* 2. DATES (Revealed only after scratch) */}
-          {isRevealed && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              className="my-6 space-y-1.5 font-cinzel text-xs sm:text-sm font-bold tracking-widest text-[#996515] uppercase bg-[#FAF5EB] py-3 px-6 rounded-2xl border border-[#D4AF37]/40 max-w-md mx-auto"
-            >
-              <p>05 DECEMBER • BARAAT & NIKAH</p>
-              <p>06 DECEMBER • WALIMA</p>
-            </motion.div>
-          )}
+          {/* 2. SACRED WEDDING DATES (04 Dec Haldi, 05 Dec Baraat & Nikah) */}
+          <div className="my-6 space-y-1.5 font-cinzel text-xs sm:text-sm font-bold tracking-widest text-[#996515] uppercase bg-[#FAF5EB] py-3 px-6 rounded-2xl border border-[#D4AF37]/40 max-w-md mx-auto">
+            <p>04 DECEMBER • HALDI CEREMONY</p>
+            <p>05 DECEMBER • BARAAT & NIKAH</p>
+          </div>
 
           <div className="w-20 h-px bg-gradient-to-r from-transparent via-[#C59A3F] to-transparent mx-auto my-6" />
 

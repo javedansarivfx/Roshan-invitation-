@@ -19,8 +19,6 @@ export const CountdownSection: React.FC<CountdownSectionProps> = ({
   });
 
   useEffect(() => {
-    if (!isRevealed) return;
-
     const targetDate = new Date(WEDDING_DATA.countdownTarget).getTime();
 
     const calculateTime = () => {
@@ -42,11 +40,7 @@ export const CountdownSection: React.FC<CountdownSectionProps> = ({
     calculateTime();
     const interval = setInterval(calculateTime, 1000);
     return () => clearInterval(interval);
-  }, [isRevealed]);
-
-  if (!isRevealed) {
-    return null;
-  }
+  }, []);
 
   const handleAddNikahToCalendar = () => {
     const title = encodeURIComponent(

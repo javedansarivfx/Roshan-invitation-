@@ -13,14 +13,13 @@ export const EventsSection: React.FC<EventsSectionProps> = ({
   onScrollToScratch,
 }) => {
   const addToCalendar = (event: WeddingEvent) => {
-    const title = encodeURIComponent(`${event.name} — Roshan & Javed Wedding`);
+    const title = encodeURIComponent(`${event.name} — Javed & Roshan Wedding`);
     const times = event.timingDetails.map((t) => `${t.label}: ${t.time} (${t.sublabel || ''})`).join('\n');
     const details = encodeURIComponent(`${event.description}\n\n${times}\nVenue: ${event.venueTitle}, ${event.address}`);
     const location = encodeURIComponent(`${event.venueTitle}, ${event.address}`);
     
     let dateStr = '20261204';
     if (event.id === 'nikah') dateStr = '20261205';
-    if (event.id === 'walima') dateStr = '20261206';
 
     const gCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dateStr}T120000Z/${dateStr}T200000Z&details=${details}&location=${location}`;
     window.open(gCalUrl, '_blank', 'noopener,noreferrer');
@@ -75,32 +74,8 @@ export const EventsSection: React.FC<EventsSectionProps> = ({
           </motion.p>
         </div>
 
-        {!isRevealed ? (
-          /* Locked State if date hasn't been scratched yet */
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="max-w-md mx-auto p-8 rounded-3xl bg-white border border-[#E2D2B5] text-center shadow-md"
-          >
-            <Sparkles className="w-8 h-8 text-[#C59A3F] mx-auto mb-3 animate-pulse" />
-            <h3 className="font-cinzel text-lg font-bold text-[#3A291A] mb-2">
-              Event Dates Locked
-            </h3>
-            <p className="font-cormorant italic text-sm text-[#665443] mb-5">
-              Please scratch the gold foil heart above to reveal the dates and ceremonial timings.
-            </p>
-            <button
-              onClick={onScrollToScratch}
-              className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#996515] to-[#C59A3F] text-white font-cinzel text-xs font-bold tracking-wider shadow-sm active:scale-95"
-            >
-              Go to Scratch Reveal
-            </button>
-          </motion.div>
-        ) : (
-          /* Unlocked Event Schedule Cards (04 Dec, 05 Dec, 06 Dec) */
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+        {/* Unlocked Event Schedule Cards (04 Dec Haldi, 05 Dec Baraat & Nikah) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
             {WEDDING_EVENTS.map((event, index) => {
               const isGrandest = event.id === 'nikah';
 
@@ -234,7 +209,6 @@ export const EventsSection: React.FC<EventsSectionProps> = ({
               );
             })}
           </div>
-        )}
       </div>
     </section>
   );

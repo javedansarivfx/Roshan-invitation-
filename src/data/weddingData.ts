@@ -121,30 +121,6 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
       'Grand Royal Shahi Dawat Feast at Sangam Sarovar',
     ],
   },
-  {
-    id: 'walima',
-    name: 'WALIMA',
-    arabicName: 'وليمة العرس المباركة',
-    dateStr: '06 DECEMBER',
-    timingDetails: [
-      {
-        label: 'TIME',
-        time: '12:00 PM',
-        sublabel: 'NOON',
-      },
-    ],
-    venueTitle: 'Village Sikanderpur',
-    address: 'Village Sikanderpur',
-    dressCode: 'Formal Luxury Attire',
-    dressColorPalette: ['#2A2118', '#C59A3F', '#9E7A38', '#FFFDF9'],
-    description:
-      'The blessed Sunnah banquet of thanksgiving, gathering families, elders, and loved ones at Village Sikanderpur to bestow heartfelt du’as upon the newly married couple.',
-    highlights: [
-      'Sunnah Walima Feast of Gratitude at Village Sikanderpur',
-      'Commemorative Family Portraits',
-      'Traditional Awadhi & Mughlai Cuisine',
-    ],
-  },
 ];
 
 export const COUPLE_GALLERY_ITEMS: StoryMilestone[] = [
